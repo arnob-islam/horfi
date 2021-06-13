@@ -13,7 +13,7 @@ window.addEventListener('load', (e) => {
 })
 
 
-$('.header-nav a').on('click', function (e) {
+$('.scrool-link a').on('click', function (e) {
   e.preventDefault()
   if (this.hash) {
     let hashTag = this.hash;
