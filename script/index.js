@@ -12,17 +12,19 @@ window.addEventListener('load', (e) => {
   preloader.classList.add('hide-Pre-loder')
 })
 
+const allHref = document.querySelectorAll('a')
 
-$('.scrool-link a').on('click', function (e) {
-  e.preventDefault()
+
+$('a').on('click', function (e) {
   if (this.hash) {
     let hashTag = this.hash;
     $('html,body').animate({
       scrollTop: $(hashTag).offset().top
     }, 600)
   }
-
 })
+
+
 
 const head = document.querySelector("header");
 window.addEventListener("scroll", () => {
@@ -169,7 +171,7 @@ const items = [
 
 function display_Portfolio(items) {
   let x = items.map(e => {
-    return `<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-8 img-carryer">
+    return `<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-8 img-carryer"data-aos="zoom-in">
               <a href="${e.img}">
                  <div class="photo-c">
                      <img src="${e.img}" class="img-fluid" alt="">
@@ -431,7 +433,7 @@ const displayTeam = () => {
 
   const show_team = team_Details.map((e) => {
     return ` <div class="col-lg-3 col-md-4 col-sm-5 col-7">
-  <div class="team-carryer">
+  <div class="team-carryer"data-aos="zoom-in">
       <div class="team-img w-100">
           <img src="${e.img}" class="img-fluid" alt="">
       </div>
