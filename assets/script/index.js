@@ -7,22 +7,7 @@ window.addEventListener('DOMContentLoaded', () => {
   display_testimonail()
 })
 
-window.addEventListener('load', (e) => {
-  const preloader = document.querySelector('.Pre-loder')
-  preloader.classList.add('hide-Pre-loder')
-})
 
-const allHref = document.querySelectorAll('a')
-
-
-$('a').on('click', function (e) {
-  if (this.hash) {
-    let hashTag = this.hash;
-    $('html,body').animate({
-      scrollTop: $(hashTag).offset().top
-    }, 600)
-  }
-})
 
 
 
@@ -33,32 +18,7 @@ window.addEventListener("scroll", () => {
 
 
 
-const toggleBtn = document.querySelector(".toggle-bar");
-const closeBtn = document.querySelector(".close-btn");
-const sidebar = document.querySelector(".slider");
 
-toggleBtn.addEventListener("click", function () {
-
-  sidebar.classList.toggle("active-slider");
-  const link = document.querySelector('.slider-links')
-  const x = link.children
-  for (let i = 0; i < x.length; i++) {
-    const element = x[i];
-
-    element.addEventListener('click', (e) => {
-      setTimeout(() => {
-        sidebar.classList.remove("active-slider");
-      }, 200);
-
-    })
-
-  }
-});
-
-closeBtn.addEventListener("click", function () {
-  sidebar.classList.remove("active-slider");
-
-});
 
 
 
@@ -74,97 +34,97 @@ const items = [
   {
     "id": 1,
     "category": "creative",
-    "img": "images/pic0.jpg"
+    "img": "assets/images/pic0.jpg"
   },
   {
     "id": 2,
     "category": "nature",
-    "img": "images/pic1.jpg"
+    "img": "assets/images/pic1.jpg"
   }
   ,
   {
     "id": 3,
     "category": "nature",
-    "img": "images/pic2.jpg"
+    "img": "assets/images/pic2.jpg"
   }
   ,
   {
     "id": 4,
     "category": "creative",
-    "img": "images/pic3.jpg"
+    "img": "assets/images/pic3.jpg"
   }
   ,
   {
     "id": 5,
     "category": "wedding",
-    "img": "images/pic4.jpg"
+    "img": "assets/images/pic4.jpg"
   }
   ,
   {
     "id": 6,
     "category": "wedding",
-    "img": "images/pic5.jpg"
+    "img": "assets/images/pic5.jpg"
   }
 
   ,
   {
     "id": 7,
     "category": "wedding",
-    "img": "images/pic7.jpg"
+    "img": "assets/images/pic7.jpg"
   }
   ,
   {
     "id": 8,
     "category": "nature",
-    "img": "images/pic11.jpg"
+    "img": "assets/images/pic11.jpg"
   }
   ,
   {
     "id": 9,
     "category": "wedding",
-    "img": "images/pic8.jpg"
+    "img": "assets/images/pic8.jpg"
   }
   ,
   {
     "id": 10,
     "category": "nature",
-    "img": "images/pic12.jpg"
+    "img": "assets/images/pic12.jpg"
   }
   ,
   {
     "id": 11,
     "category": "creative",
-    "img": "images/pic13.jpg"
+    "img": "assets/images/pic13.jpg"
   }
   ,
   {
     "id": 12,
     "category": "nature",
-    "img": "images/pic14.jpg"
+    "img": "assets/images/pic14.jpg"
   }
   ,
   {
     "id": 13,
     "category": "wedding",
-    "img": "images/pic9.jpg"
+    "img": "assets/images/pic9.jpg"
   }
   ,
   {
     "id": 14,
     "category": "creative",
-    "img": "images/pic15.jpg"
+    "img": "assets/images/pic15.jpg"
   }
   ,
   {
     "id": 15,
     "category": "wedding",
-    "img": "images/pic10.jpg"
+    "img": "assets/images/pic10.jpg"
   }
   ,
   {
     "id": 16,
     "category": "creative",
-    "img": "images/pic16.jpg"
+    "img": "assets/images/pic16.jpg"
   }
 
 ]
@@ -275,19 +235,19 @@ const testimonal_container = document.querySelector('.testimonal-wrapper')
 
 let testimonal_members = [
   {
-    img: 'images/client1.jpg',
+    img: 'assets/images/client1.jpg',
     name: 'Chirs May',
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere asperiores sint nobis! Placeat adipisci ullam possimus temporibus tempore.voluptatum minus temporibus esse.`
 
   },
   {
-    img: 'images/client2.jpg',
+    img: 'assets/images/client2.jpg',
     name: 'Hrittik',
     text: ` Salvia glossier subway tile, leggings mustache YOLO semiotics chia. Pitchfork tbh af
   blog church-key meggings vaporware PBR&B master cleanse post-ironic man.`
   },
   {
-    img: 'images/client3.jpg',
+    img: 'assets/images/client3.jpg',
     name: 'Moush Pal',
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere asperiores sint nobis! Placeat adipisci ullam possimus temporibus tempore.voluptatum minus temporibus esse.`
   }
@@ -314,7 +274,7 @@ function display_testimonail() {
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                   </a>
-                  <h4 class="mt-2">- ${e.name}</h4>
+                  <h4 class="mt-2">${e.name}</h4>
               </div>
               <p class="w-50 mx-auto">
                ${e.text}
@@ -329,26 +289,7 @@ function display_testimonail() {
 
 }
 
-$(document).ready(() => {
-  $('.testimonal-wrapper').owlCarousel({
-    loop: true,
-    nav: true,
-    autoplay: true,
-    autoplayTimeout: 5000,
-    responsive: {
-      0: {
-        items: 1,
 
-      },
-      600: {
-        items: 1
-      },
-      1000: {
-        items: 1
-      }
-    }
-  })
-})
 /*
     ****************** testimonial area end *************
 */
@@ -357,73 +298,45 @@ $(document).ready(() => {
 
 
 
-$('.overview-carousel').owlCarousel({
-  loop: true,
-  nav: false,
-  autoplay: true,
-  autoplayTimeout: 1500,
-  responsive: {
-    0: {
-      items: 1,
-      stagePadding: 30,
-
-    },
-    501: {
-      items: 1.5
-    },
-    625: {
-      items: 2
-    },
-    1000: {
-      items: 3
-    },
-    1300: {
-      items: 4
-    }
-
-  }
-})
-
-
 
 
 
 /*
     ****************** Team area start *************
 */
-const team_Details = [
-  {
-    id: 1,
-    img: 'images/team1.jpg',
-    faceBook: '#0',
-    in: '#0',
-    instagram: '#0',
-    twitter: '0#'
-  },
-  {
-    id: 2,
-    img: 'images/team2.jpg',
-    faceBook: '#0',
-    in: '#0',
-    instagram: '#0',
-    twitter: '#0'
 
-  },
-  {
-    id: 3,
-    img: 'images/team3.jpg',
+const team_Details = [
+  { id: 1,
+    img: 'assets/images/team1.jpg',
     faceBook: '#0',
     in: '#0',
     instagram: '#0',
-    twitter: '#0'
+    twitter: '0#',
+    aos_delay:'00'
   },
-  {
-    id: 4,
-    img: 'images/team4.jpg',
+  { id: 2,
+    img: 'assets/images/team2.jpg',
     faceBook: '#0',
     in: '#0',
     instagram: '#0',
-    twitter: '#0'
+    twitter: '#0',
+    aos_delay:'100'
+  },
+  { id: 3,
+    img: 'assets/images/team3.jpg',
+    faceBook: '#0',
+    in: '#0',
+    instagram: '#0',
+    twitter: '#0',
+    aos_delay:'200'
+  },
+  { id: 4,
+    img: 'assets/images/team4.jpg',
+    faceBook: '#0',
+    in: '#0',
+    instagram: '#0',
+    twitter: '#0',
+    aos_delay:'300'
   }
 
 ]
@@ -433,7 +346,7 @@ const displayTeam = () => {
 
   const show_team = team_Details.map((e) => {
     return ` <div class="col-lg-3 col-md-4 col-sm-5 col-7">
-  <div class="team-carryer"data-aos="zoom-in">
+  <div class="team-carryer"data-aos="fade-up" data-aos-delay="${e.aos_delay}">
       <div class="team-img w-100">
           <img src="${e.img}" class="img-fluid" alt="">
       </div>
@@ -552,9 +465,9 @@ const offer_display = () => {
   }
 
   setInterval(calling, 1000)
-
-
 }
+
+
 /*
     ****************** Offer area end *************
 */
