@@ -131,7 +131,7 @@ const items = [
 
 function display_Portfolio(items) {
   let x = items.map(e => {
-    return `<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-8 img-carryer"data-aos="zoom-in">
+    return `<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-8 img-carryer" data-aos="zoom-in">
               <a href="${e.img}">
                  <div class="photo-c">
                      <img src="${e.img}" class="img-fluid" alt="">
